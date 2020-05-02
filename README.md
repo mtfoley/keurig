@@ -9,7 +9,7 @@ This is a NodeJS module intended to be installed globally and its purpose is to 
 
 2) In one of your project folders, install this file globally:
 
-`npm install -g path-to-keurig-folder`
+`npm install -g PATH-TO-KEURIG-FOLDER`
 
 ## Usage
 The tool accepts one or two command line arguments. The first is the file you want to create tests for. If the 2nd argument is not specified, test files are created in the same directory.
