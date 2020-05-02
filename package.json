@@ -1,0 +1,19 @@
+{
+  "name": "keurig",
+  "version": "1.0.0",
+  "description": "Generates Test Files",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "keurig": "./bin/keurig-global.js"
+  },
+  "preferGlobal": true,
+  "author": "Matthew Foley",
+  "license": "MIT",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "log-symbols": "^4.0.0"
+  }
+}
