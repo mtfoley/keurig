@@ -1,5 +1,5 @@
 {
-  "name": "keurig",
+  "name": "@mtfoley/keurig",
   "version": "1.0.0",
   "description": "Generates Test Files",
   "main": "./lib/index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "keurig": "./bin/keurig-global.js"
+    "keurig": "bin/keurig-global.js"
   },
   "preferGlobal": true,
   "author": "Matthew Foley",
@@ -15,5 +15,24 @@
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "log-symbols": "^4.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtfoley/keurig.git"
+  },
+  "keywords": [
+    "testing",
+    "test",
+    "bdd",
+    "tdd",
+    "mocha"
+  ],
+  "bugs": {
+    "url": "https://github.com/mtfoley/keurig/issues"
+  },
+  "homepage": "https://github.com/mtfoley/keurig#readme"
 }

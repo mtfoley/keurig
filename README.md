@@ -3,13 +3,9 @@
 This is a NodeJS module intended to be installed globally and its purpose is to scaffold Javascript test files. The name is inspired by [Mocha](https://github.com/mochajs/mocha). This might already exist, but I have not gone looking for it!
 
 ## Install
-1) In some general folder besides one of your project folders, clone the repo:
+1) Install globally from NPM:
 
-`git clone https://github.com/mtfoley/keurig.git`
-
-2) In one of your project folders, install this file globally:
-
-`npm install -g PATH-TO-KEURIG-FOLDER`
+`npm install -g @mtfoley/keurig`
 
 ## Usage
 The tool accepts one or two command line arguments. The first is the file you want to create tests for. If the 2nd argument is not specified, test files are created in the same directory.
