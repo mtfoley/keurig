@@ -1,6 +1,8 @@
 ## Keurig
 
-This is a NodeJS module intended to be installed globally and its purpose is to scaffold Javascript test files. The name is inspired by [Mocha](https://github.com/mochajs/mocha). This might already exist, but I have not gone looking for it!
+This is a NodeJS module intended to be installed globally and its purpose is to scaffold Javascript test files for Javascript classes. The name is inspired by [Mocha](https://github.com/mochajs/mocha). This might already exist, but I have not gone looking for it!
+
+It uses [@babel/parser](https://npmjs.com/package/@babel/parser) to parse the javascript files and identify Class Declarations, Class Methods, and Class Field assignments inside constructors. Based on this information, it generates test files for each class found.
 
 ## Install
 1) Install globally from NPM:
@@ -8,11 +10,11 @@ This is a NodeJS module intended to be installed globally and its purpose is to 
 `npm install -g @mtfoley/keurig`
 
 ## Usage
-The tool accepts one or two command line arguments. The first is the file you want to create tests for. If the 2nd argument is not specified, test files are created in the same directory.
+The tool accepts an optional outputDirectory argument. The default will be to use the current working directory. The required argument is the file or glob of files you want to create tests for.
 
-`keurig classFile.js [testsDirectory]`
+`keurig [-d outputDirectory ] */**.js`
 
-For example, if working in a directory that has file called `testClass.js`:
+For example, if the target files include a file called `testClass.js`:
 ```javascript
     class TestClass {
         constructor(field1value){
@@ -36,17 +38,15 @@ And then running `keurig testClass.js ./tests`, the utility will create files in
     before(function(done){
         done();
     });
-        describe('Method constructor()',function(){
+        describe('constructor()',function(){
+            it('succeeds',function(done){done();});
+            it('has field field1',function(done){done();})
+        });
+        describe('method1()',function(){
             it('succeeds',function(done){done();});
         });
-        describe('Method method1()',function(){
+        describe('method2(x,y)',function(){
             it('succeeds',function(done){done();});
-        });
-        describe('Method method2(x,y)',function(){
-            it('succeeds',function(done){done();});
-        });
-        describe('Field field1',function(){
-            it('exists',function(done){done();});
         });
     after(function(done){
         done();
@@ -58,17 +58,12 @@ and this for TestClass2.test.js:
     before(function(done){
         done();
     });
-        describe('Method constructor()',function(){
+        describe('constructor()',function(){
             it('succeeds',function(done){done();});
+            it('has field field2',function(done){done();})
         });
         describe('Method method3(x,y,z)',function(){
             it('succeeds',function(done){done();});
-        });
-        describe('Field field1',function(){
-            it('exists',function(done){done();});
-        });
-        describe('Field field2',function(){
-            it('exists',function(done){done();});
         });
     after(function(done){
         done();

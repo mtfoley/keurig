@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-var myLibrary = require('../lib/index.js');
-myLibrary.inspect();
+var index = require('../lib/index.js');
+index.run();
