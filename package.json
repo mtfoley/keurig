@@ -13,6 +13,8 @@
   "author": "Matthew Foley",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/generator": "^7.9.6",
     "@babel/parser": "^7.9.6",
     "ansi-colors": "^4.1.1",
     "log-symbols": "^4.0.0"
